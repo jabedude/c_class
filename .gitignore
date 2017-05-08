@@ -1,6 +1,6 @@
 bin/*
-bin/!.gitkeep
-bin/!.keep
+!bin/.gitkeep
+!bin/.keep
 *.swp
 *.o
 a.out
