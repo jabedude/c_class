@@ -3,8 +3,10 @@ SRCS=$(wildcard *.c)
 CC=gcc
 CFLAGS=-Wall -Wextra -Wpedantic -Wwrite-strings -Wstack-usage=1024 -Wfloat-equal -Waggregate-return -Winline
 
-all:
-	$(CC) $(CFLAGS) -o $@ $<
+all: $(SRCS:.c=)
+
+.c:
+	$(CC) $(CPFLAGS) $< -o ../bin/$@
 
 clean:
-	rm -f bin/*
+	rm -f ../bin/*
