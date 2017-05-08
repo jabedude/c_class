@@ -1,0 +1,3 @@
+a. semicolon after int main(void)
+b. b type not declared
+c. c not declared
