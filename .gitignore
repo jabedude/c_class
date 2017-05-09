@@ -4,3 +4,4 @@ bin/*
 *.swp
 *.o
 a.out
+test*
