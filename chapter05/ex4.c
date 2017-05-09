@@ -11,7 +11,7 @@ int main(void)
                 i++;
 
                 if (c == '\n') {
-                        if (i < 20) {
+                        if (line[0] == line[i - 2]) {
                                 for (int j = 0; j < i; j++) {
                                         putchar(line[j]);
                                 }
