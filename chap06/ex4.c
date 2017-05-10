@@ -12,8 +12,10 @@ int main(int argc, char *argv[])
 
         if (check(argv[1]))
                 printf("%s\n", "access granted");
-        else
+        else {
                 deny();
+                return 1;
+        }
 
         return 0;
 }
