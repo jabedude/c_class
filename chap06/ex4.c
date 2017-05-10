@@ -5,16 +5,12 @@ int check(char arg[]);
 
 int main(int argc, char *argv[])
 {
-        if (argc != 2) {
+        if (argc != 2 || !check(argv[1])) {
                 deny();
                 return 1;
-        }
-
-        if (check(argv[1]))
+        } else {
                 printf("%s\n", "access granted");
-        else {
-                deny();
-                return 1;
+                return 0;
         }
 
         return 0;
