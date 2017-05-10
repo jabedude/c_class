@@ -6,7 +6,7 @@ CFLAGS=-Wall -Wextra -Wpedantic -Wwrite-strings -Wstack-usage=1024 -Wfloat-equal
 all: $(SRCS:.c=)
 
 .c:
-	$(CC) $(CPFLAGS) $< -o ../bin/$@
+	$(CC) $(CFLAGS) $< -o ../bin/$@
 
 clean:
 	rm -f ../bin/*
