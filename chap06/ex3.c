@@ -18,20 +18,16 @@ int main(void)
 
 void split(char input[], char out[], char out2[])
 {
-        int i = 0;
+        int i = 0, j = 0;
+
         while ((input[i] != ' ') && (input[i] != '\t')) {
                 out[i] = input[i];
                 i++;
         }
-
         out[i] = '\0';
 
-
-        while ((input[i] == ' ') || (input[i] == '\t')) {
+        while ((input[i] == ' ') || (input[i] == '\t'))
                 i++;
-        }
-
-        int j = 0;
 
         while(input[i] != '\0') {
                 out2[j] = input[i];
