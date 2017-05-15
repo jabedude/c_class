@@ -11,6 +11,8 @@ CC	chap03/Makefile	/^CC=gcc$/;"	m
 CC	chap04/Makefile	/^CC=gcc$/;"	m
 CC	chap05/Makefile	/^CC=gcc$/;"	m
 CC	chap06/Makefile	/^CC=gcc$/;"	m
+CC	chap07/Makefile	/^CC=gcc$/;"	m
+CC	chap08/Makefile	/^CC=gcc$/;"	m
 CFLAGS	Makefile	/^CFLAGS=-Wall -Wextra -Wpedantic -Wwrite-strings -Wstack-usage=1024 -Wfloat-equal -Waggregate-return -Winline$/;"	m
 CFLAGS	chap01/Makefile	/^CFLAGS=-Wall -Wextra -Wpedantic -Wwrite-strings -Wstack-usage=1024 -Wfloat-equal -Waggregate-return -Winline$/;"	m
 CFLAGS	chap02/Makefile	/^CFLAGS=-Wall -Wextra -Wpedantic -Wwrite-strings -Wstack-usage=1024 -Wfloat-equal -Waggregate-return -Winline$/;"	m
@@ -18,6 +20,8 @@ CFLAGS	chap03/Makefile	/^CFLAGS=-Wall -Wextra -Wpedantic -Wwrite-strings -Wstack
 CFLAGS	chap04/Makefile	/^CFLAGS=-Wall -Wextra -Wpedantic -Wwrite-strings -Wstack-usage=1024 -Wfloat-equal -Waggregate-return -Winline$/;"	m
 CFLAGS	chap05/Makefile	/^CFLAGS=-Wall -Wextra -Wpedantic -Wwrite-strings -Wstack-usage=1024 -Wfloat-equal -Waggregate-return -Winline$/;"	m
 CFLAGS	chap06/Makefile	/^CFLAGS=-Wall -Wextra -Wpedantic -Wwrite-strings -Wstack-usage=1024 -Wfloat-equal -Waggregate-return -Winline$/;"	m
+CFLAGS	chap07/Makefile	/^CFLAGS=-Wall -Wextra -Wpedantic -Wwrite-strings -Wstack-usage=1024 -Wfloat-equal -Waggregate-return -Winline$/;"	m
+CFLAGS	chap08/Makefile	/^CFLAGS=-Wall -Wextra -Wpedantic -Wwrite-strings -Wstack-usage=1024 -Wfloat-equal -Waggregate-return -Winline$/;"	m
 MAX	chap06/ex3.c	3;"	d	file:
 SRCS	Makefile	/^SRCS=$(wildcard *.c)$/;"	m
 SRCS	chap01/Makefile	/^SRCS=$(wildcard *.c)$/;"	m
@@ -26,8 +30,13 @@ SRCS	chap03/Makefile	/^SRCS=$(wildcard *.c)$/;"	m
 SRCS	chap04/Makefile	/^SRCS=$(wildcard *.c)$/;"	m
 SRCS	chap05/Makefile	/^SRCS=$(wildcard *.c)$/;"	m
 SRCS	chap06/Makefile	/^SRCS=$(wildcard *.c)$/;"	m
+SRCS	chap07/Makefile	/^SRCS=$(wildcard *.c)$/;"	m
+SRCS	chap08/Makefile	/^SRCS=$(wildcard *.c)$/;"	m
 alphacheck	chap06/ex1.c	/^int alphacheck(char str[])$/;"	f
+average	chap08/ex1.c	/^void average(int numbers[], int amount, double *avg)$/;"	f
 bmi	chap03/ex15.c	/^void bmi(int lbs, int in)$/;"	f
+changecase	chap07/ex2.c	/^void changecase(char string[])$/;"	f
+changecase	chap08/ex3b.c	/^void changecase(char *string)$/;"	f
 check	chap06/ex4.c	/^int check(char arg[])$/;"	f
 deny	chap06/ex4.c	/^void deny(void)$/;"	f
 eligible	chap03/ex14.c	/^void eligible(int age, int years)$/;"	f
@@ -61,8 +70,24 @@ main	chap06/ex1.c	/^int main(void)$/;"	f
 main	chap06/ex2.c	/^int main(void)$/;"	f
 main	chap06/ex3.c	/^int main(void)$/;"	f
 main	chap06/ex4.c	/^int main(int argc, char *argv[])$/;"	f
+main	chap07/ex1.c	/^int main(void)$/;"	f
+main	chap07/ex2.c	/^int main(void)$/;"	f
+main	chap07/ex3.c	/^int main(void)$/;"	f
+main	chap07/ex4.c	/^int main(void)$/;"	f
+main	chap08/ex1.c	/^int main(void)$/;"	f
+main	chap08/ex2.c	/^int main(void)$/;"	f
+main	chap08/ex3a.c	/^int main(void)$/;"	f
+main	chap08/ex3b.c	/^int main(void)$/;"	f
+main	chap08/ex3c.c	/^int main(void)$/;"	f
+main	chap08/ex4.c	/^int main(int argc, char *argv[])$/;"	f
 main	template.c	/^int main(int argc, char *argv[])$/;"	f
+mystrcmp	chap07/ex3.c	/^int mystrcmp(char string1[], char string2[])$/;"	f
+mystrcmp	chap08/ex3c.c	/^int mystrcmp(char *string1, char *string2)$/;"	f
+palindrome	chap07/ex4.c	/^int palindrome(char string[])$/;"	f
 power	chap06/ex2.c	/^long power(int base, int exponent)$/;"	f
+reverse	chap07/ex1.c	/^void reverse(char string[])$/;"	f
+reverse	chap08/ex3a.c	/^void reverse(char *string)$/;"	f
 split	chap06/ex3.c	/^void split(char input[], char out[], char out2[])$/;"	f
+stats	chap08/ex2.c	/^void stats(int *nums, int sz, double *mean, double *var)$/;"	f
 sum_of_squares	chap02/ex4.c	/^int sum_of_squares(int x, int y)$/;"	f
 sum_of_squares	chap02/ex5.c	/^int sum_of_squares(int x, int y)$/;"	f
