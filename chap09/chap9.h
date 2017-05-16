@@ -20,6 +20,6 @@ struct money add(struct money a, struct money b);
 void add2(struct money a, struct money b, struct money *c);
 struct money input(void);
 void print(struct money mon);
-void sort(struct employee [] array, int sz);
+void sort(struct employee array[], int sz);
 
 #endif
