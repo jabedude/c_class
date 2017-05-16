@@ -4,11 +4,11 @@ void stats(int *nums, int sz, double *mean, double *var);
 
 int main(void)
 {
-        int num[] = {1, 2, 3};
+        int num[] = {1, 2, 3, 4, 5};
         double avg;
         double variance;
 
-        stats(num, 3, &avg, &variance);
+        stats(num, 5, &avg, &variance);
 
         printf("Average is: %f\nVariance is: %f\n", avg, variance);
         return 0;
