@@ -10,11 +10,13 @@ int main(void)
         employees[2].pay = 4;
         employees[3].pay = 5;
 
+        printf("Before sort...\n");
         for (int i = 0; i < 4; i++)
                 printf("%f\n", employees[i].pay);
 
         sort(employees, 4);
 
+        printf("After sort...\n");
         for (int i = 0; i < 4; i++)
                 printf("%f\n", employees[i].pay);
 
