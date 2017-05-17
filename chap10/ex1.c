@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+int compare(FILE *file1, FILE *file2);
+
 int main(int argc, char *argv[])
 {
     if (argc != 3)
@@ -14,8 +16,25 @@ int main(int argc, char *argv[])
         if (!f1 || !f2)
         {
             fprintf(stderr, "Error opening file.\n");
+            return -1;
+        }
+        else
+        {
+            if(compare(f1, f2))
+            {
+                fprintf(stdout, "%s and %s are the same.\n", argv[1], argv[2]);
+            }
+            else
+            {
+                fprintf(stdout, "%s and %s are different.\n", argv[1], argv[2]);
+            }
         }
     }
 
+    return 0;
+}
+
+int compare(FILE *file1, FILE *file2)
+{
     return 0;
 }
