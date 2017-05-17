@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int compare(FILE *file1, FILE *file2);
 
@@ -23,10 +24,14 @@ int main(int argc, char *argv[])
             if(compare(f1, f2))
             {
                 fprintf(stdout, "%s and %s are the same.\n", argv[1], argv[2]);
+                fclose(f1);
+                fclose(f2);
             }
             else
             {
                 fprintf(stdout, "%s and %s are different.\n", argv[1], argv[2]);
+                fclose(f1);
+                fclose(f2);
             }
         }
     }
@@ -36,5 +41,16 @@ int main(int argc, char *argv[])
 
 int compare(FILE *file1, FILE *file2)
 {
-    return 0;
+    char c[100], d[100];
+
+    while(((fgets(c, 100, file1)) != NULL) &&
+            (fgets(d, 100, file2)) != NULL)
+    {
+        if (strcmp(c, d))
+        {
+            return 0;
+        }
+    }
+
+    return 1;
 }
