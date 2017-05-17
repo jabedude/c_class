@@ -1,45 +1,42 @@
 #include <stdio.h>
 #include <string.h>
 
-void glue(FILE *file1, FILE *file2);
+void glue(FILE *file);
 
 int main(int argc, char *argv[])
 {
-    if (argc != 3)
+    if (argc < 2)
     {
-        fprintf(stderr, "Usage: %s file1 file2\n", argv[0]);
+        fprintf(stderr, "Usage: %s <files to glue>\n", argv[0]);
         return -1;
     }
     else
     {
-        FILE *f1 = fopen(argv[1], "r");
-        FILE *f2 = fopen(argv[2], "r");
-        if (!f1 || !f2)
+        for (int i = 1; i < argc; i++)
         {
-            fprintf(stderr, "Error opening file.\n");
-            return -1;
-        }
-        else
-        {
-            glue(f1, f2);
-            fclose(f1);
-            fclose(f2);
+            FILE *f = fopen(argv[i], "r");
+            if (!f)
+            {
+                fprintf(stderr, "Error opening file.\n");
+                return -1;
+            }
+            else
+            {
+                glue(f);
+                fclose(f);
+            }
         }
     }
 
     return 0;
 }
 
-void glue(FILE *file1, FILE *file2)
+void glue(FILE *file)
 {
-    char c, d;
+    char c;
 
-    while((c = getc(file1)) != EOF)
+    while((c = getc(file)) != EOF)
     {
         putchar(c);
-    }
-    while((d = getc(file2)) != EOF)
-    {
-        putchar(d);
     }
 }
