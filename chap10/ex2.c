@@ -32,14 +32,14 @@ int main(int argc, char *argv[])
 
 void glue(FILE *file1, FILE *file2)
 {
-    char c[100], d[100];
+    char c, d;
 
-    while((fgets(c, 100, file1)) != NULL)
+    while((c = getc(file1)) != EOF)
     {
-        puts(c);
+        putchar(c);
     }
-    while((fgets(d, 100, file2)) != NULL)
+    while((d = getc(file2)) != EOF)
     {
-        puts(d);
+        putchar(d);
     }
 }
