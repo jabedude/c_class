@@ -5,3 +5,4 @@ bin/*
 *.o
 a.out
 test*
+.gdb_history
