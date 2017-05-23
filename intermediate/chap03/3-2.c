@@ -67,6 +67,28 @@ int main()
 void record(int person, int action)
 {
     //  You write this function
+    static int rec[ALL][COLS];
+
+    if (person > ALL || action > ALL)
+    {
+        return;
+    }
+    else if (action == WIN || action == PLACE || action == SHOW)
+    {
+        rec[person][action - 1] += 1;
+    }
+    else if (action == CLEAR)
+    {
+        memset(rec, 0, sizeof(rec));
+    }
+    else if (action == PRINT)
+    {
+        print(rec, person);
+    }
+    else if (action == POINTS)
+    {
+        printpoints(rec, person);
+    }
 }
 
 
@@ -74,9 +96,9 @@ void print(int tab[][COLS], int howmany)
 {
 	int i;
     
-	printf("person    win      place     show	total\n");
+	printf("person\twin\tplace\tshow\ttotal\n");
 	for (i = 1; i <= howmany; i++) {
-		printf ("%10d%10d%10d%10d%10d\n",
+		printf ("%d\t%d\t%d\t%d\t%d\n",
 			i, tab[i][0], tab[i][1],tab[i][2],tab[i][3]);
     }
 }
