@@ -1,0 +1,7 @@
+Write a program that for each argument prints the arg, howmany bits are set in the 
+argument and what the bit configuration is for that argument.
+
+	$ prog 13 21 32767
+	 7     4 00000000000000000000000000001101
+	21     3 00000000000000000000000000010101
+	32767 15 00000000000000001111111111111111
