@@ -9,6 +9,7 @@ main(int argc, char *argv[])
 {
     FILE *fp;
     int ind;
+    unsigned int match;
     char word[10];
     char words[10][10] = {0};
     int counts[10] = {0};
@@ -30,16 +31,22 @@ main(int argc, char *argv[])
     int pos = 0;
     while (fscanf(fp, "%s", word) != EOF)
     {
-        //puts(word);
-        if (!(pos = in(word, words)))
+        match = 0;
+        for (pos = 0; pos < ind; pos++)
+        {
+            if (!strcmp(word, words[ind]))
+            {
+                counts[ind]++;
+                match = 1;
+                break;
+            }
+        }
+
+        if (!match)
         {
             strcpy(words[ind], word);
             counts[ind] = 1;
             ind++;
-        }
-        else
-        {
-            counts[ind]++;
         }
     }
 
