@@ -94,7 +94,15 @@ SETP setunion(SETP a, SETP b)
 
 SETP setintersection(SETP a, SETP b)
 {
-//
-//	YOU WRITE THIS PART
-//
+    SETP ret;
+    ret = create();
+
+    for (int i = 0; i < a->howmany; i++) {
+        for (int j = 0; j < b->howmany; j++) {
+            if (a->array[i] == b->array[j])
+                ret->array[ret->howmany++] = b->array[j];
+        }
+    }
+
+    return ret;
 }
