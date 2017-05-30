@@ -11,7 +11,7 @@
 int main()
 {
     //  You write the main function
-
+    
 }
 
 FRACTION init(int num, int denom)
@@ -40,4 +40,13 @@ FRACTION input(void)
 void print(FPTR t)   // recall FPTR is a fraction pointer
 {
     printf("%d/%d\n", t -> n, t -> d);
+}
+
+FRACTION add(FPTR a, FPTR b)
+{
+    FRACTION tmp;
+    tmp.n = a->n * b->d + a->d * b->n;
+    tmp.d = a->d * b->d;
+
+    return tmp;
 }
